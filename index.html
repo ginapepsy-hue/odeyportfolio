@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Odey | Portfolio</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background: linear-gradient(135deg, #ffe6f0, #f3e8ff);
+    color:#2b2b2b;
+}
+/* Navbar */
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 8%;
+    background:#ffffffcc;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+
+
+.logo img{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+    display:block;
+    filter: drop-shadow(0 0 10px rgba(255, 105, 180, 0.6));
+    transition: 0.3s ease;
+}
+
+.logo img:hover{
+    transform: scale(1.05);
+}
+
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+.nav-links a{
+    color:rgb(10, 2, 2);
+    font-weight:600;
+    transition:0.3s;
+    font-size: 1.1rem;
+}
+
+.nav-links a:hover{
+    color:#ff4d6d;
+}
+
+.menu-btn{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+    z-index: 1100;
+    position: relative;
+    
+}
+
+/* Hero */
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.hero-content h1{
+    font-size:4rem;
+    margin-bottom:15px;
+}
+
+.hero-content span{
+    color:#38bdf8;
+}
+
+.hero-content p{
+    font-size:1.2rem;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 28px;
+    background: linear-gradient(135deg, #ff4d6d, #c77dff);
+    color:#fff;
+    box-shadow: 0 5px 15px rgba(255, 77, 109, 0.3);
+    /* color:#000; */
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:bold;
+}
+
+/* Sections */
+section{
+    padding:80px 8%;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:2.2rem;
+}
+
+/* About */
+.about{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:40px;
+    align-items:center;
+}
+
+.about img{
+    width:100%;
+    border-radius:15px;
+}
+
+.about-text p{
+    line-height:1.8;
+    font-size: 1.2rem;
+}
+
+/* Skills */
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.skill{
+    background:#ffe6f0;
+    padding:20px;
+    text-align:center;
+    border-radius:10px;
+    font-weight:bold;
+    font-size: 1.3rem;
+}
+
+/* Projects */
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.project{
+     background:#ffffff;
+    color:#333;
+    box-shadow:0 10px 25px rgba(255,182,193,0.3);
+    overflow:hidden;
+}
+
+.project img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
+
+.project-content{
+    padding:20px;
+}
+
+.project-content h3{
+    margin-bottom:10px;
+}
+
+/* Contact */
+.contact{
+    text-align:center;
+}
+
+.contact-icons{
+    margin-top:20px;
+}
+
+.contact-icons a{
+    color:#38bdf8;
+    font-size:28px;
+    margin:0 10px;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:20px;
+    background:black;
+    color: white;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+    .hero-content h1{
+        font-size:2.5rem;
+    }
+
+    .about{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+   
+    .menu-btn{
+        display:block;
+        z-index: 1100;
+        color: rgb(68, 21, 21);
+    }
+
+    .nav-links{
+        z-index: 1000;
+    }
+
+
+    .nav-links{
+        position:absolute;
+        top:80px;
+        left:0;
+        width:100%;
+        background:pink;
+        flex-direction:column;
+        text-align:center;
+        padding:20px 0;
+        display:none;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">
+    <img src="./gem_logo-removebg-preview.png" alt="Odey Logo">
+</div>
+    <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="menu-btn" id="menuBtn">
+        <i class="fas fa-bars"></i>
+    </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-content">
+        <h1>Hello, I'm <span>Odey Regina Owogoga</span></h1>
+        <p>
+            A passionate Web Developer focused on building modern,
+            responsive, and user-friendly websites that deliver
+            exceptional digital experiences.
+        </p>
+
+        <a href="#projects" class="btn">View Projects</a>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="about">
+        <img src="./gem iconicimage.jpeg"
+        alt="Profile">
+
+        <div class="about-text">
+            <p>
+               I'm a Frontend Web Developer who turns ideas into clean, responsive, and user-focused digital experiences. I specialize in building modern web interfaces using HTML, CSS, and JavaScript, with a strong eye for design and performance.
+I enjoy collaborating with developers, graphic designers, and clients to transform concepts into functional, visually appealing websites that not only look good but work smoothly across all devices. My approach blends technical precision with creative thinking, ensuring every project is both scalable and user-friendly.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+    <h2 class="section-title">Skills</h2>
+
+    <div class="skills-grid">
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Bootstrap</div>
+        <div class="skill">Git & GitHub</div>
+        <div class="skill">Responsive Design</div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+    <h2 class="section-title">Projects</h2>
+
+    <div class="projects-grid">
+
+        <div class="project">
+            <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800" alt="">
+            <div class="project-content">
+                <h3>Cinema Website</h3>
+                <p>Modern cinema booking and entertainment platform.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800" alt="">
+            <div class="project-content">
+                <h3>Real Estate Website</h3>
+                <p>Property listing platform with responsive design.</p>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800" alt="">
+            <div class="project-content">
+                <h3>Business Landing Page</h3>
+                <p>Professional landing page for lead generation.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="contact">
+    <h2 class="section-title">Contact Me</h2>
+
+    <p>Let's work together on your next project.</p>
+
+    <div class="contact-icons">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+    </div>
+</section>
+
+<footer>
+    <p>© 2026 Odey Portfolio. All Rights Reserved.</p>
+</footer>
+
+<script>
+const menuBtn = document.getElementById("menuBtn");
+const navLinks = document.getElementById("navLinks");
+
+menuBtn.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+});
+</script>
+
+</body>
+</html>
