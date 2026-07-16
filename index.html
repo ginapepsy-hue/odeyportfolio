@@ -7,6 +7,7 @@
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 
+
 <style>
 *{
     margin:0;
@@ -88,6 +89,7 @@ body{
 .hero-content h1{
     font-size:4rem;
     margin-bottom:15px;
+  
 }
 
 .hero-content span{
@@ -276,9 +278,8 @@ footer{
     <div class="hero-content">
         <h1>Hello, I'm <span>Odey Regina Owogoga</span></h1>
         <p>
-            A passionate Web Developer focused on building modern,
-            responsive, and user-friendly websites that deliver
-            exceptional digital experiences.
+           A passionate Web Developer with a strong foundation in HTML, CSS, JavaScript, and responsive web design. I enjoy transforming ideas into modern, user-friendly, and visually appealing websites that deliver exceptional digital experiences across all devices. My focus is on writing clean, efficient, and maintainable code while creating fast, accessible, and performance-driven web applications. I am committed to continuous learning, embracing new technologies, and solving real-world problems through innovative digital solutions. Whether working independently or collaborating with a team, I strive to build websites that are both functional and engaging, helping businesses and individuals establish a strong online presence.
+
         </p>
 
         <a href="#projects" class="btn">View Projects</a>
@@ -301,6 +302,385 @@ I enjoy collaborating with developers, graphic designers, and clients to transfo
         </div>
     </div>
 </section>
+
+<style>
+/* ================= EDUCATION SECTION ================= */
+
+.education{
+    padding: 80px 20px;
+    background: #f8fafc;
+}
+
+.education .container{
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title span{
+    display: inline-block;
+    color: #a40808;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.section-title h2{
+    font-size: clamp(2rem, 5vw, 3rem);
+    color: #080600;
+    margin-top: 10px;
+}
+
+.education-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.education-card{
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,.08);
+    transition: all .3s ease;
+    border-left: 6px solid #e8355e;
+}
+
+.education-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.15);
+}
+
+.edu-year{
+    display: inline-block;
+    background: #a60513;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.education-card h3{
+    color: #111827;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.education-card h4{
+    color: #c20a25;
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.education-card p{
+    color: #6b7280;
+    line-height: 1.8;
+    font-size: .95rem;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width:768px){
+
+    .education{
+        padding:60px 15px;
+    }
+
+    .education-container{
+        grid-template-columns:1fr;
+    }
+
+    .education-card{
+        padding:25px;
+    }
+
+    .section-title h2{
+        font-size:2rem;
+    }
+
+    .education-card h3{
+        font-size:1.2rem;
+    }
+}
+</style>
+
+<!-- ================= EDUCATION SECTION ================= -->
+
+<section class="education" id="education">
+
+    <div class="container">
+
+        <div class="section-title">
+            <span>My Journey</span>
+            <h2>Education</h2>
+        </div>
+
+        <div class="education-container">
+
+            <div class="education-card">
+                <div class="edu-year">2018 - 2023</div>
+                <h3>Heritage Polytechnic, Eket</h3>
+                <h4>National Diploma (ND) & Higher National Diploma (HND)</h4>
+                <p>
+                    Studied Computer Engineering where I gained knowledge in
+                    programming, networking, computer hardware, and software
+                    development.
+                </p>
+            </div>
+
+            <div class="education-card">
+                <div class="edu-year">2010 - 2016</div>
+                <h3>Secondary School</h3>
+                <h4>Senior Secondary Certificate (SSCE)</h4>
+                <p>
+                    Completed my secondary education while building strong
+                    foundations in science, mathematics, and technology.
+                </p>
+            </div>
+
+            <div class="education-card">
+                <div class="edu-year">2002 - 2010</div>
+                <h3>Primary School</h3>
+                <h4>First School Leaving Certificate</h4>
+                <p>
+                    Completed my primary education and developed essential
+                    literacy, numeracy, and communication skills.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<style>
+/*================ PRICING SECTION =================*/
+
+.pricing{
+    min-height:50vh;
+    padding:80px 8%;
+    background:#f8fafc;
+}
+
+.pricing-title{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.pricing-title span{
+    display:inline-block;
+    color:#980a1d;
+    font-size:19px;
+    font-weight:600;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+.pricing-title h2{
+    font-size:clamp(2rem,5vw,3rem);
+    color:#111827;
+    margin:10px 0;
+}
+
+.pricing-title p{
+    max-width:650px;
+    margin:auto;
+    color:#6b7280;
+    line-height:1.8;
+}
+
+.pricing-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.price-card{
+    background:#fff;
+    padding:35px;
+    border-radius:18px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    transition:.35s ease;
+    position:relative;
+}
+
+.price-card:hover{
+    transform:translateY(-10px);
+}
+
+.price-card h3{
+    color:#111827;
+    font-size:1.5rem;
+    margin-bottom:15px;
+}
+
+.price-card h1{
+    color:#9c0511;
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.price-card ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.price-card ul li{
+    padding:10px 0;
+    color:#555;
+}
+
+.price-btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:12px 35px;
+    background:#a30303;
+    color:#fff;
+    text-decoration:none;
+    border-radius:30px;
+    transition:.3s;
+    font-weight:600;
+}
+
+.price-btn:hover{
+    background:#15803d;
+}
+
+.popular{
+    border:3px solid #16a34a;
+}
+
+.badge{
+    position:absolute;
+    top:-15px;
+    right:20px;
+    background:#16a34a;
+    color:#fff;
+    padding:6px 16px;
+    border-radius:20px;
+    font-size:.8rem;
+    font-weight:600;
+}
+
+/*============== RESPONSIVE ==============*/
+
+@media (max-width:768px){
+
+    .pricing{
+        padding:60px 20px;
+    }
+
+    .pricing-container{
+        grid-template-columns:1fr;
+    }
+
+    .price-card{
+        padding:30px;
+    }
+
+    .price-card h1{
+        font-size:2.5rem;
+    }
+
+    .pricing-title h2{
+        font-size:2rem;
+    }
+}
+</style>
+
+<!--================ PRICING SECTION =================-->
+
+<section class="pricing" id="pricing">
+
+    <div class="pricing-title">
+        <span>My Services</span>
+        <h2>Pricing Plans</h2>
+
+        <p>
+            Choose a package that best fits your project. I build fast,
+            responsive, modern, and user-friendly websites that help
+            businesses establish a strong online presence.
+        </p>
+    </div>
+
+    <div class="pricing-container">
+
+        <!-- Basic -->
+        <div class="price-card">
+            <h3>Basic Website</h3>
+
+            <h1>$100</h1>
+
+            <ul>
+                <li>✔ One Landing Page</li>
+                <li>✔ Responsive Design</li>
+                <li>✔ Contact Form</li>
+                <li>✔ Basic SEO</li>
+                <li>✔ 7 Days Support</li>
+            </ul>
+
+            <a href="#contact" class="price-btn">Hire Me</a>
+
+        </div>
+
+        <!-- Standard -->
+        <div class="price-card popular">
+
+            <span class="badge">Most Popular</span>
+
+            <h3>Business Website</h3>
+
+            <h1>$250</h1>
+
+            <ul>
+                <li>✔ Up to 5 Pages</li>
+                <li>✔ Fully Responsive</li>
+                <li>✔ Contact Form</li>
+                <li>✔ Smooth Animations</li>
+                <li>✔ SEO Optimization</li>
+                <li>✔ 30 Days Support</li>
+            </ul>
+
+            <a href="#contact" class="price-btn">Hire Me</a>
+
+        </div>
+
+        <!-- Premium -->
+        <div class="price-card">
+
+            <h3>Custom Web Application</h3>
+
+            <h1>$500+</h1>
+
+            <ul>
+                <li>✔ Custom Design</li>
+                <li>✔ Dashboard</li>
+                <li>✔ Database Integration</li>
+                <li>✔ API Integration</li>
+                <li>✔ Performance Optimization</li>
+                <li>✔ 90 Days Support</li>
+            </ul>
+
+            <a href="#contact" class="price-btn">Hire Me</a>
+
+        </div>
+
+    </div>
+
+</section>
+
 
 <!-- Skills -->
 <section id="skills">
@@ -358,7 +738,7 @@ I enjoy collaborating with developers, graphic designers, and clients to transfo
     <div class="contact-icons">
         <a href="https://github.com/ginapepsy-hue"><i class="fab fa-github"></i></a>
         <a href="https://www.linkedin.com/in/odey-regina-282417393/"><i class="fab fa-linkedin"></i></a>
-        <a href="https://wa.me/2349046764446" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://wa.me/2349046764446" target="_blank "><i class="fab fa-whatsapp"></i></a>
     </div>
 </section>
 
