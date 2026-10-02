@@ -1,441 +1,460 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Odey | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odey | Portfolio</title>
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-
-
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    background: linear-gradient(135deg, #ffe6f0, #f3e8ff);
-    color:#2b2b2b;
-}
-/* Navbar */
-.navbar{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 8%;
-    background:#ffffffcc;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
 
 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
 
-.logo img{
-    width:60px;
-    height:60px;
-    object-fit:contain;
-    display:block;
-    filter: drop-shadow(0 0 10px rgba(255, 105, 180, 0.6));
-    transition: 0.3s ease;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-.logo img:hover{
-    transform: scale(1.05);
-}
+        body {
+            background: linear-gradient(135deg, #ffe6f0, #f3e8ff);
+            color: #2b2b2b;
+        }
 
-.nav-links{
-    display:flex;
-    list-style:none;
-    gap:25px;
-}
-.nav-links a{
-    color:rgb(10, 2, 2);
-    font-weight:600;
-    transition:0.3s;
-    font-size: 1.1rem;
-}
-
-.nav-links a:hover{
-    color:#ff4d6d;
-}
-
-.menu-btn{
-    display:none;
-    font-size:28px;
-    cursor:pointer;
-    z-index: 1100;
-    position: relative;
-    
-}
-
-/* Hero */
-.hero{
-    min-height:90vh;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    padding:40px 20px;
-}
-
-.hero-content h1{
-    font-size:4rem;
-    margin-bottom:15px;
-  
-}
-
-.hero-content span{
-    color:#38bdf8;
-}
-
-.hero-content p{
-    font-size:1.2rem;
-    max-width:700px;
-    margin:auto;
-    line-height:1.8;
-}
-
-.btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:12px 28px;
-    background: linear-gradient(135deg, #ff4d6d, #c77dff);
-    color:#fff;
-    box-shadow: 0 5px 15px rgba(255, 77, 109, 0.3);
-    /* color:#000; */
-    text-decoration:none;
-    border-radius:8px;
-    font-weight:bold;
-}
-
-/* Sections */
-section{
-    padding:80px 8%;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:40px;
-    font-size:2.2rem;
-}
-
-/* About */
-.about{
-    display:grid;
-    grid-template-columns:1fr 2fr;
-    gap:40px;
-    align-items:center;
-}
-
-.about img{
-    width:100%;
-    border-radius:15px;
-}
-
-.about-text p{
-    line-height:1.8;
-    font-size: 1.2rem;
-}
-
-/* Skills */
-.skills-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-    gap:20px;
-}
-
-.skill{
-    background:#ffe6f0;
-    padding:20px;
-    text-align:center;
-    border-radius:10px;
-    font-weight:bold;
-    font-size: 1.3rem;
-}
-
-/* Projects */
-.projects-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:25px;
-}
-
-.project{
-     background:#ffffff;
-    color:#333;
-    box-shadow:0 10px 25px rgba(255,182,193,0.3);
-    overflow:hidden;
-}
-
-.project img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
-
-.project-content{
-    padding:20px;
-}
-
-.project-content h3{
-    margin-bottom:10px;
-}
-
-/* Contact */
-.contact{
-    text-align:center;
-}
-
-.contact-icons{
-    margin-top:20px;
-}
-
-.contact-icons a{
-    color:#38bdf8;
-    font-size:28px;
-    margin:0 10px;
-}
-
-/* Footer */
-footer{
-    text-align:center;
-    padding:20px;
-    background:black;
-    color: white;
-}
-
-/* Mobile */
-@media(max-width:768px){
-
-    .hero-content h1{
-        font-size:2.5rem;
-    }
-
-    .about{
-        grid-template-columns:1fr;
-        text-align:center;
-    }
-
-   
-    .menu-btn{
-        display:block;
-        z-index: 1100;
-        color: rgb(68, 21, 21);
-    }
-
-    .nav-links{
-        z-index: 1000;
-    }
+        /* Navbar */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: #ffffffcc;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
 
-    .nav-links{
-        position:absolute;
-        top:80px;
-        left:0;
-        width:100%;
-        background:pink;
-        flex-direction:column;
-        text-align:center;
-        padding:20px 0;
-        display:none;
-    }
 
-    .nav-links.active{
-        display:flex;
-    }
-}
-</style>
+        .logo img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            display: block;
+            filter: drop-shadow(0 0 10px rgba(255, 105, 180, 0.6));
+            transition: 0.3s ease;
+        }
+
+        .logo img:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: rgb(10, 2, 2);
+            font-weight: 600;
+            transition: 0.3s;
+            font-size: 1.1rem;
+        }
+
+        .nav-links a:hover {
+            color: #ff4d6d;
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+            z-index: 1100;
+            position: relative;
+
+        }
+
+        /* Hero */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 15px;
+
+        }
+
+        .hero-content span {
+            color: #38bdf8;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: auto;
+            line-height: 1.8;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 28px;
+            background: linear-gradient(135deg, #ff4d6d, #c77dff);
+            color: #fff;
+            box-shadow: 0 5px 15px rgba(255, 77, 109, 0.3);
+            /* color:#000; */
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        /* Sections */
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.2rem;
+        }
+
+        /* About */
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        .about-text p {
+            line-height: 1.8;
+            font-size: 1.2rem;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill {
+            background: #ffe6f0;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        /* Projects */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .project {
+            background: #ffffff;
+            color: #333;
+            box-shadow: 0 10px 25px rgba(255, 182, 193, 0.3);
+            overflow: hidden;
+        }
+
+        .project img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-content h3 {
+            margin-bottom: 10px;
+        }
+
+        /* Contact */
+        .contact {
+            text-align: center;
+        }
+
+        .contact-icons {
+            margin-top: 20px;
+        }
+
+        .contact-icons a {
+            color: #38bdf8;
+            font-size: 28px;
+            margin: 0 10px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: black;
+            color: white;
+        }
+
+        /* Mobile */
+        @media(max-width:768px) {
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+
+            .menu-btn {
+                display: block;
+                z-index: 1100;
+                color: rgb(68, 21, 21);
+            }
+
+            .nav-links {
+                z-index: 1000;
+            }
+
+
+            .nav-links {
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: pink;
+                flex-direction: column;
+                text-align: center;
+                padding: 20px 0;
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-<!-- Navbar -->
-<nav class="navbar">
-    <div class="logo">
-    <img src="./new odey logo.png" alt="Odey Logo">
-</div>
-    <ul class="nav-links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="./new odey logo.png" alt="Odey Logo">
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
 
-    <div class="menu-btn" id="menuBtn">
-        <i class="fas fa-bars"></i>
-    </div>
-</nav>
+        <div class="menu-btn" id="menuBtn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
 
-<!-- Hero -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>Hello, I'm <span>Odey Regina Owogoga</span></h1>
-        <p>
-           A passionate Web Developer with a strong foundation in HTML, CSS, JavaScript, and responsive web design. I enjoy transforming ideas into modern, user-friendly, and visually appealing websites that deliver exceptional digital experiences across all devices. My focus is on writing clean, efficient, and maintainable code while creating fast, accessible, and performance-driven web applications. I am committed to continuous learning, embracing new technologies, and solving real-world problems through innovative digital solutions. Whether working independently or collaborating with a team, I strive to build websites that are both functional and engaging, helping businesses and individuals establish a strong online presence.
-
-        </p>
-
-        <a href="#projects" class="btn">View Projects</a>
-    </div>
-</section>
-
-<!-- About -->
-<section id="about">
-    <h2 class="section-title">About Me</h2>
-
-    <div class="about">
-        <img src="./gemicon.jpeg"
-        alt="Profile">
-
-        <div class="about-text">
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Hello, I'm <span>Odey Regina Owogoga</span></h1>
             <p>
-               I'm a Frontend Web Developer who turns ideas into clean, responsive, and user-focused digital experiences. I specialize in building modern web interfaces using HTML, CSS, and JavaScript, with a strong eye for design and performance.
-I enjoy collaborating with developers, graphic designers, and clients to transform concepts into functional, visually appealing websites that not only look good but work smoothly across all devices. My approach blends technical precision with creative thinking, ensuring every project is both scalable and user-friendly.
+                Frontend Developer
+                I build modern, responsive, and user-friendly websites that turn ideas into engaging digital
+                experiences.
+                I specialize in HTML, CSS, JavaScript, Bootstrap, and responsive web design, with a focus on clean code,
+                intuitive interfaces, performance, and accessibility.
+                Whether you need a professional business website, landing page, or custom web application, I create
+                digital solutions designed to look great and work seamlessly across devices.
+                Let's build something great together.
+
             </p>
+
+            <a href="#projects" class="btn">View Projects</a>
         </div>
-    </div>
-</section>
+    </section>
 
-<style>
-/* ================= EDUCATION SECTION ================= */
+    <!-- About -->
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
 
-.education{
-    padding: 80px 20px;
-    background: #f8fafc;
-}
+        <div class="about">
+            <img src="./gemicon.jpeg" alt="Profile">
 
-.education .container{
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.section-title{
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.section-title span{
-    display: inline-block;
-    color: #a40808;
-    font-size: 19px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-
-.section-title h2{
-    font-size: clamp(2rem, 5vw, 3rem);
-    color: #080600;
-    margin-top: 10px;
-}
-
-.education-container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 25px;
-}
-
-.education-card{
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,.08);
-    transition: all .3s ease;
-    border-left: 6px solid #e8355e;
-}
-
-.education-card:hover{
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,.15);
-}
-
-.edu-year{
-    display: inline-block;
-    background: #a60513;
-    color: #fff;
-    padding: 8px 18px;
-    border-radius: 30px;
-    font-weight: 600;
-    margin-bottom: 20px;
-}
-
-.education-card h3{
-    color: #111827;
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-}
-
-.education-card h4{
-    color: #c20a25;
-    margin-bottom: 15px;
-    font-size: 1rem;
-}
-
-.education-card p{
-    color: #6b7280;
-    line-height: 1.8;
-    font-size: .95rem;
-}
-
-/* ================= RESPONSIVE ================= */
-
-@media (max-width:768px){
-
-    .education{
-        padding:60px 15px;
-    }
-
-    .education-container{
-        grid-template-columns:1fr;
-    }
-
-    .education-card{
-        padding:25px;
-    }
-
-    .section-title h2{
-        font-size:2rem;
-    }
-
-    .education-card h3{
-        font-size:1.2rem;
-    }
-}
-</style>
-
-<!-- ================= EDUCATION SECTION ================= -->
-
-<section class="education" id="education">
-
-    <div class="container">
-
-        <div class="section-title">
-            <span>My Journey</span>
-            <h2>Education</h2>
-        </div>
-
-        <div class="education-container">
-
-            <div class="education-card">
-                <div class="edu-year">2018 - 2023</div>
-                <h3>Heritage Polytechnic, Eket</h3>
-                <h4>National Diploma (ND) & Higher National Diploma (HND)</h4>
+            <div class="about-text">
                 <p>
-                    Studied Computer Engineering where I gained knowledge in
-                    programming, networking, computer hardware, and software
-                    development.
+                    I'm a frontend developer passionate about creating clean, responsive, and engaging digital
+                    experiences.
+                    I specialize in building modern web interfaces using HTML, CSS, JavaScript, and Bootstrap, with a
+                    strong focus on responsive design, usability, and performance.
+                    I enjoy turning ideas and concepts into functional websites that are visually appealing and easy to
+                    use. I also enjoy collaborating with developers, designers, and clients to bring projects from
+                    concept to completion.
+                    My approach combines technical precision with creative problem-solving, while maintaining clean and
+                    maintainable code.
+                    I'm continuously learning and developing my skills as web technologies evolve, with the goal of
+                    creating websites that help businesses and individuals establish a strong online presence.
                 </p>
             </div>
+        </div>
+    </section>
 
-            <div class="education-card">
+    <style>
+        /* ================= EDUCATION SECTION ================= */
+
+        .education {
+            padding: 80px 20px;
+            background: #f8fafc;
+        }
+
+        .education .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title span {
+            display: inline-block;
+            color: #a40808;
+            font-size: 19px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .section-title h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: #080600;
+            margin-top: 10px;
+        }
+
+        .education-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+        }
+
+        .education-card {
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+            transition: all .3s ease;
+            border-left: 6px solid #e8355e;
+        }
+
+        .education-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, .15);
+        }
+
+        .edu-year {
+            display: inline-block;
+            background: #a60513;
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .education-card h3 {
+            color: #111827;
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+        }
+
+        .education-card h4 {
+            color: #c20a25;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+
+        .education-card p {
+            color: #6b7280;
+            line-height: 1.8;
+            font-size: .95rem;
+        }
+
+        /* ================= RESPONSIVE ================= */
+
+        @media (max-width:768px) {
+
+            .education {
+                padding: 60px 15px;
+            }
+
+            .education-container {
+                grid-template-columns: 1fr;
+            }
+
+            .education-card {
+                padding: 25px;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+
+            .education-card h3 {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+
+    <!-- ================= EDUCATION SECTION ================= -->
+
+    <section class="education" id="education">
+
+        <div class="container">
+
+            <div class="section-title">
+                <!-- <span>My Journey</span> -->
+                <h2>Education</h2>
+            </div>
+
+            <div class="education-container">
+
+                <div class="education-card">
+                    <div class="edu-year">2018 - 2023</div>
+                    <h3>Heritage Polytechnic, Eket</h3>
+                    <h4>National Diploma (ND) & Higher National Diploma (HND)</h4>
+                    <p>
+                        Studied Computer Engineering where I gained knowledge in
+                        programming, networking, computer hardware, and software
+                        development.
+                    </p>
+                </div>
+
+                <!-- <div class="education-card">
                 <div class="edu-year">2010 - 2016</div>
                 <h3>Secondary School</h3>
                 <h4>Senior Secondary Certificate (SSCE)</h4>
@@ -443,9 +462,9 @@ I enjoy collaborating with developers, graphic designers, and clients to transfo
                     Completed my secondary education while building strong
                     foundations in science, mathematics, and technology.
                 </p>
-            </div>
+            </div> -->
 
-            <div class="education-card">
+                <!-- <div class="education-card">
                 <div class="edu-year">2002 - 2010</div>
                 <h3>Primary School</h3>
                 <h4>First School Leaving Certificate</h4>
@@ -453,307 +472,322 @@ I enjoy collaborating with developers, graphic designers, and clients to transfo
                     Completed my primary education and developed essential
                     literacy, numeracy, and communication skills.
                 </p>
+            </div> -->
+
             </div>
 
         </div>
 
-    </div>
+    </section>
 
-</section>
+    <style>
+        /*================ PRICING SECTION =================*/
 
-<style>
-/*================ PRICING SECTION =================*/
+        .pricing {
+            min-height: 50vh;
+            padding: 80px 8%;
+            background: #f8fafc;
+        }
 
-.pricing{
-    min-height:50vh;
-    padding:80px 8%;
-    background:#f8fafc;
-}
+        .pricing-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
 
-.pricing-title{
-    text-align:center;
-    margin-bottom:50px;
-}
+        .pricing-title span {
+            display: inline-block;
+            color: #980a1d;
+            font-size: 19px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
 
-.pricing-title span{
-    display:inline-block;
-    color:#980a1d;
-    font-size:19px;
-    font-weight:600;
-    letter-spacing:1px;
-    text-transform:uppercase;
-}
+        .pricing-title h2 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            color: #111827;
+            margin: 10px 0;
+        }
 
-.pricing-title h2{
-    font-size:clamp(2rem,5vw,3rem);
-    color:#111827;
-    margin:10px 0;
-}
+        .pricing-title p {
+            max-width: 650px;
+            margin: auto;
+            color: #6b7280;
+            line-height: 1.8;
+        }
 
-.pricing-title p{
-    max-width:650px;
-    margin:auto;
-    color:#6b7280;
-    line-height:1.8;
-}
+        .pricing-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
 
-.pricing-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
-    max-width:1200px;
-    margin:auto;
-}
+        .price-card {
+            background: #fff;
+            padding: 35px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, .08);
+            transition: .35s ease;
+            position: relative;
+        }
 
-.price-card{
-    background:#fff;
-    padding:35px;
-    border-radius:18px;
-    text-align:center;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.35s ease;
-    position:relative;
-}
+        .price-card:hover {
+            transform: translateY(-10px);
+        }
 
-.price-card:hover{
-    transform:translateY(-10px);
-}
+        .price-card h3 {
+            color: #111827;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
 
-.price-card h3{
-    color:#111827;
-    font-size:1.5rem;
-    margin-bottom:15px;
-}
+        .price-card h1 {
+            color: #9c0511;
+            font-size: 1,5rem;
+            margin-bottom: 20px;
+        }
 
-.price-card h1{
-    color:#9c0511;
-    font-size:3rem;
-    margin-bottom:20px;
-}
+        .price-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
 
-.price-card ul{
-    list-style:none;
-    padding:0;
-    margin:0;
-}
+        .price-card ul li {
+            padding: 10px 0;
+            color: #555;
+        }
 
-.price-card ul li{
-    padding:10px 0;
-    color:#555;
-}
+        .price-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 35px;
+            background: #a30303;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px;
+            transition: .3s;
+            font-weight: 600;
+        }
 
-.price-btn{
-    display:inline-block;
-    margin-top:25px;
-    padding:12px 35px;
-    background:#a30303;
-    color:#fff;
-    text-decoration:none;
-    border-radius:30px;
-    transition:.3s;
-    font-weight:600;
-}
+        .price-btn:hover {
+            background: #38bdf8;
+        }
 
-.price-btn:hover{
-    background:#38bdf8;
-}
+        .popular {
+            border: 3px solid #0a0901;
+        }
 
-.popular{
-    border:3px solid #0a0901;
-}
+        .badge {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background: #38bdf8;
+            color: #fff;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: .8rem;
+            font-weight: 600;
+        }
 
-.badge{
-    position:absolute;
-    top:-15px;
-    right:20px;
-    background:#38bdf8;
-    color:#fff;
-    padding:6px 16px;
-    border-radius:20px;
-    font-size:.8rem;
-    font-weight:600;
-}
 
-/*============== RESPONSIVE ==============*/
+        /*============== RESPONSIVE ==============*/
 
-@media (max-width:768px){
+        @media (max-width:768px) {
 
-    .pricing{
-        padding:60px 20px;
-    }
+            .pricing {
+                padding: 60px 20px;
+            }
 
-    .pricing-container{
-        grid-template-columns:1fr;
-    }
+            .pricing-container {
+                grid-template-columns: 1fr;
+            }
 
-    .price-card{
-        padding:30px;
-    }
+            .price-card {
+                padding: 30px;
+            }
 
-    .price-card h1{
-        font-size:2.5rem;
-    }
+            .price-card h1 {
+                font-size: 2.5rem;
+            }
 
-    .pricing-title h2{
-        font-size:2rem;
-    }
-}
-</style>
+            .pricing-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 
-<!--================ PRICING SECTION =================-->
+    <!--================ PRICING SECTION =================-->
 
-<section class="pricing" id="pricing">
+    <section class="pricing" id="pricing">
 
-    <div class="pricing-title">
-        <span>My Services</span>
-        <h2>Pricing Plans</h2>
+        <div class="pricing-title">
+            <span>My Services</span>
+            <h2>Pricing Plans</h2>
 
-        <p>
-            Choose a package that best fits your project. I build fast,
-            responsive, modern, and user-friendly websites that help
-            businesses establish a strong online presence.
-        </p>
-    </div>
-
-    <div class="pricing-container">
-
-        <!-- Basic -->
-        <div class="price-card">
-            <h3>Basic Website</h3>
-
-            <h1>$100</h1>
-
-            <ul>
-                <li>✔ One Landing Page</li>
-                <li>✔ Responsive Design</li>
-                <li>✔ Contact Form</li>
-                <li>✔ Basic SEO</li>
-                <li>✔ 7 Days Support</li>
-            </ul>
-
-            <a href="#contact" class="price-btn">Hire Me</a>
-
+            <p>
+               I create fast, responsive, and modern websites tailored to the needs of businesses, individuals, and organizations.
+            </p>
         </div>
 
-        <!-- Standard -->
-        <div class="price-card popular">
+        <div class="pricing-container">
 
-            <span class="badge">Most Popular</span>
+            <!-- Basic -->
+            <div class="price-card">
+                <h3>Starter/landing page</h3>
 
-            <h3>Business Website</h3>
+                <h1>$100-$150</h1>
 
-            <h1>$250</h1>
+                <ul>
+                    <li>✔ 1 Page</li>
+                    <li>✔ Responsive Design</li>
+                    <li>✔ Contact/WhatsApp integration</li>
+                    <li>✔ Basic SEO</li>
+                    <li>✔ 5-7 Days delivery</li>
+                </ul>
 
-            <ul>
-                <li>✔ Up to 5 Pages</li>
-                <li>✔ Fully Responsive</li>
-                <li>✔ Contact Form</li>
-                <li>✔ Smooth Animations</li>
-                <li>✔ SEO Optimization</li>
-                <li>✔ 30 Days Support</li>
-            </ul>
+                <a href="#contact" class="price-btn">Hire Me</a>
 
-            <a href="#contact" class="price-btn">Hire Me</a>
-
-        </div>
-
-        <!-- Premium -->
-        <div class="price-card">
-
-            <h3>Custom Web Application</h3>
-
-            <h1>$500+</h1>
-
-            <ul>
-                <li>✔ Custom Design</li>
-                <li>✔ Dashboard</li>
-                <li>✔ Database Integration</li>
-                <li>✔ API Integration</li>
-                <li>✔ Performance Optimization</li>
-                <li>✔ 90 Days Support</li>
-            </ul>
-
-            <a href="#contact" class="price-btn">Hire Me</a>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- Skills -->
-<section id="skills">
-    <h2 class="section-title">Skills</h2>
-
-    <div class="skills-grid">
-        <div class="skill">HTML5</div>
-        <div class="skill">CSS3</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">Bootstrap</div>
-        <div class="skill">Git & GitHub</div>
-        <div class="skill">Responsive Design</div>
-    </div>
-</section>
-
-<!-- Projects -->
-<section id="projects">
-    <h2 class="section-title">Projects</h2>
-
-    <div class="projects-grid">
-
-        <div class="project">
-            <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800" alt="">
-            <div class="project-content">
-                <h3>Cinema Website</h3>
-                <p>Modern cinema booking and entertainment platform.</p>
             </div>
-        </div>
 
-        <div class="project">
-            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800" alt="">
-            <div class="project-content">
-                <h3>Real Estate Website</h3>
-                <p>Property listing platform with responsive design.</p>
+            <!-- Standard -->
+            <div class="price-card popular">
+
+                <span class="badge">Most Popular</span>
+
+                <h3>Business Website</h3>
+
+                <h1>$250-$400</h1>
+
+                <ul>
+                    <li>✔ Up to 5 Pages</li>
+                    <li>✔ Responsive Design</li>
+                    <li>✔ Contact Forms</li>
+                    <li>✔ WhatsApp/social integration</li>
+                    <li>✔ Animations</li>
+                    <li>✔ 2-3 revision rounds</li>
+                    <li>✔ 10-14 day delivery</li>
+                </ul>
+
+                <a href="#contact" class="price-btn">Hire Me</a>
+
             </div>
-        </div>
 
-        <div class="project">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800" alt="">
-            <div class="project-content">
-                <h3>Business Landing Page</h3>
-                <p>Professional landing page for lead generation.</p>
+            <!-- Premium -->
+            <div class="price-card">
+
+                <h3>Custom Web Application</h3>
+
+                <h1>$500+</h1>
+
+                <ul>
+                    <li>✔ Custom UI</li>
+                    <li>✔ Dashboard</li>
+                    <li>✔ Database Integration</li>
+                    <li>✔ API Integration</li>
+                    <li>✔ Authentication Where required</li>
+                    <li>✔ Performance Optimization</li>
+                    <li>✔ Custom functionality</li>
+                    <li>✔ Timeline based on project scope</li>
+                </ul>
+
+                <a href="#contact" class="price-btn">Hire Me</a>
+
             </div>
+
         </div>
 
-    </div>
-</section>
+    </section>
 
-<!-- Contact -->
-<section id="contact" class="contact">
-    <h2 class="section-title">Contact Me</h2>
 
-    <p>Let's work together on your next project.</p>
+    <!-- Skills -->
+    <section id="skills">
+        <h2 class="section-title">Skills</h2>
 
-    <div class="contact-icons">
-        <a href="https://github.com/ginapepsy-hue"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/odey-regina-282417393/"><i class="fab fa-linkedin"></i></a>
-        <a href="https://wa.me/2349046764446" target="_blank "><i class="fab fa-whatsapp"></i></a>
-    </div>
-</section>
+        <div class="skills-grid">
+            <!-- <div class="skill">FRONTEND DEVELOPMENT</div> -->
+            <div class="skill">HTML5</div>
+            <div class="skill">CSS3</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Bootstrap</div>
+            <div class="skill">Git & GitHub</div>
+            <div class="skill">Responsive Web Design</div>
+            <div class="skill">User-Friendly interface Design</div>
+        </div>
+    </section>
 
-<footer>
-    <p>© 2026 Gcode_hub. All Rights Reserved.</p>
-</footer>
+    <!-- Projects -->
+    <section id="projects">
+        <h2 class="section-title">Featured Projects</h2>
 
-<script>
-const menuBtn = document.getElementById("menuBtn");
-const navLinks = document.getElementById("navLinks");
+        <div class="projects-grid">
 
-menuBtn.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-});
-</script>
+            <div class="project">
+                <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800" alt="">
+                <div class="project-content">
+                    <h3>Cinema Website</h3>
+                    <p>Modern cinema booking and entertainment platform.</p>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800" alt="">
+                <div class="project-content">
+                    <h3>Real Estate Website</h3>
+                    <p>Property listing platform with responsive design.</p>
+                </div>
+            </div>
+
+            <div class="project">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800" alt="">
+                <div class="project-content">
+                    <h3>Business Landing Page</h3>
+                    <p>Professional landing page for lead generation.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    
+
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Contact Me</h2>
+
+        <p>Let's work together on your next project.</p>
+
+        <div class="contact-icons">
+            <a href="https://github.com/ginapepsy-hue"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/odey-regina-282417393/"><i class="fab fa-linkedin"></i></a>
+            <a href="https://wa.me/2349046764446" target="_blank "><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </section>
+
+
+    <footer>
+        <p>© 2026 Gcode_hub. All Rights Reserved.</p>
+    </footer>
+
+
+    <a href="#home" class="scroll-up" id="scroll-up">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <script>
+        const menuBtn = document.getElementById("menuBtn");
+        const navLinks = document.getElementById("navLinks");
+
+        menuBtn.addEventListener("click", () => {
+            navLinks.classList.toggle("active");
+        });
+    </script>
 
 </body>
+
 </html>
